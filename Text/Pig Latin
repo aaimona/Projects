@@ -1,0 +1,14 @@
+piglatin <- function(x) {
+  vowels <- c("a", "e", "i", "o", "u", "y")
+  if(is.character(x) == FALSE) {
+    print("Error: non-character string entered")
+  } else if(substr(x, 1, 1) %in% vowels == TRUE) {
+    print("Error: string begins with a vowel")
+  } else {
+    first <- substr(x, 1, 1)
+    print(first)
+    rest <- substr(x, 2, nchar(x))
+    print(rest)
+    cat(rest, "-", first, "ay", sep = "")
+  }
+}
